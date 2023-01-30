@@ -6,14 +6,14 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingVertical: 12,
         paddingHorizontal: 15,
+        marginHorizontal:10,
         borderRadius: 4,
-        elevation: 3
+        elevation: 3,
     },
     container : {
         width:"100%",
         height:"100%",
         display:'flex',
-        alignItems: 'center',
         justifyContent: 'center'
     },
     text :{
@@ -22,9 +22,11 @@ export const styles = StyleSheet.create({
     input :{
         paddingVertical: 12,
         paddingHorizontal: 20,
-        backgroundColor:"#ddd",
+        backgroundColor:"#eee",
         margin:10,
-        borderColor:"none"
+        marginHorizontal:10,
+        borderColor:"none",
+        width:"100%",
     },
     image : {
         width:150,

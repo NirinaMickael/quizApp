@@ -18,7 +18,14 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   NotFound: undefined;
   Login:undefined;
+  Dashboard:undefined;
 };
+
+export type RootDrawerParamList = {
+  Home : undefined;
+  TakeQuiz :undefined;
+  Results : undefined;
+}
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
   RootStackParamList,
@@ -49,4 +56,8 @@ export type Theme = {
 export type ThemeTypeContext ={
   theme : NonNullable<ColorSchemeName>;
   setter : React.Dispatch<React.SetStateAction<NonNullable<ColorSchemeName>>>;
+}
+export interface IResponse {
+  id:number,
+  response : string
 }

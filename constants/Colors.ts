@@ -10,7 +10,7 @@ export default {
     tabIconSelected: tintColorLight,
   },
   dark: {
-    text: '#aedbee',
+    text: '#aaa',
     background: '#9e7505',
     tint: tintColorDark,
     tabIconDefault: '#301E67',

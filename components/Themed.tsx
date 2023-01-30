@@ -1,8 +1,3 @@
-/**
- * Learn more about Light and Dark modes:
- * https://docs.expo.io/guides/color-schemes/
- */
-
 import { ImageProps,Image , Pressable, PressableProps, StyleProp, Text as DefaultText, TextInput, View as DefaultView, ViewStyle } from 'react-native';
 import Colors from '../constants/Colors';
 import { ThemeContext } from '../hooks/useColorScheme';
@@ -25,7 +20,7 @@ type ThemeProps = {
   lightColor?: string;
   darkColor?: string;
   text?:string;
-  action ?: Function;
+  action ?: any;
   color?:string;
 };
 
@@ -36,7 +31,7 @@ export type InputProps =  ThemeProps &  TextInput["props"];
 export function Text(props: TextProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
   const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
-  return <DefaultText  style={[{ color }, style]} {...otherProps}  />;
+  return <DefaultText  style={[{ color }, style,{fontWeight:'600'}]} {...otherProps}  />;
 }
 
 export function View(props: ViewProps) {
@@ -49,7 +44,7 @@ export function  Button(props : ButtonProps){
   const backgroundColor = useThemeColor({light:lightColor,dark:darkColor},"background");
   
   return (
-    <Pressable onPress={()=>props.action} style={[{backgroundColor},style as StyleProp<ViewStyle>]} >
+    <Pressable onPress={props.action} style={[{backgroundColor},style as StyleProp<ViewStyle>]} >
         <Text>{props.text}</Text>
     </Pressable>
   )
