@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { SvgXml } from 'react-native-svg'
 import { BaseImage, Button, Input, Text, View } from '../components/Themed'
 import Font from '../constants/Font'
-import Svg from '../helpers/Svg'
+import {Svg} from '../helpers/Svg'
 import { styles } from '../styles/themeStyles'
 export function SignUpScreen({ navigation }: { navigation: any }) {
   return (

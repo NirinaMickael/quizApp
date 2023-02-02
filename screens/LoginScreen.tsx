@@ -2,7 +2,7 @@ import { SafeAreaView, TouchableOpacity } from 'react-native'
 import { SvgXml } from 'react-native-svg'
 import { Button, Input, Text, View } from '../components/Themed'
 import Font from '../constants/Font'
-import Svg from '../helpers/Svg'
+import {Svg} from '../helpers/Svg'
 import { styles } from '../styles/themeStyles'
 
 export default function LoginScreen({ navigation }: { navigation: any }) {

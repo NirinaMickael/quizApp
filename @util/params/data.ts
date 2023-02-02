@@ -1,0 +1,33 @@
+export default {
+    category : [
+        {
+            id:0,
+            category:"Linux"
+        },
+        {
+            id:1,
+            category:"Code"
+        },
+        {
+            id:2,
+            category:"Docker"
+        },
+        {
+            id:3,
+            category:"Sql"
+        },
+        {
+            id:4,
+            category:"Cms"
+        },
+        {
+            id:5,
+            category:"Bash"
+        },
+        {
+            id:6,
+            category:"DevOps"
+        },
+    ],
+    difficulty:["Easy","Medium","Hard"]
+}; 

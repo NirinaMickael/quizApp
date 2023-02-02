@@ -3,10 +3,11 @@
  * https://reactnavigation.org/docs/typescript/
  */
 
+import { types } from '@babel/core';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { ColorSchemeName } from 'react-native';
 declare global {
   namespace ReactNavigation {
@@ -27,6 +28,9 @@ export type RootDrawerParamList = {
   Results : undefined;
 }
 
+export type QuizStackParamList = {
+  Category:undefined;
+}
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
   RootStackParamList,
   Screen
@@ -58,6 +62,15 @@ export type ThemeTypeContext ={
   setter : React.Dispatch<React.SetStateAction<NonNullable<ColorSchemeName>>>;
 }
 export interface IResponse {
+  category?: string;
   id:number,
-  response : string
+  response ?: string
+}
+export interface IQuiz {
+  category:string;
+  difficulty:string;
+}
+export type QuizContextType = {
+  quizData: IQuiz;
+  setQuizData: (data:IQuiz) => void;
 }

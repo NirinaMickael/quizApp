@@ -7,13 +7,11 @@ import {
 import { SvgXml } from 'react-native-svg'
 import Colors from '../constants/Colors'
 import Layout from '../constants/Layout'
-import Svg from '../helpers/Svg'
+import {Svg} from '../helpers/Svg'
 import { View ,Text} from './Themed'
 import { StyleSheet } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { useNavigation } from '@react-navigation/native'
 export default function customerDrawer(props: DrawerContentComponentProps) {
-  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -50,7 +48,7 @@ export default function customerDrawer(props: DrawerContentComponentProps) {
         > 
           <TouchableOpacity
           style={styles.boutton}
-          onPress={()=>{navigation.navigate("Root")}}
+          // onPress={()=>{navigation.navigate('Login')}}
           >
           <View 
             style={styles.container}

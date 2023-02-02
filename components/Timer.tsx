@@ -2,17 +2,21 @@ import { View ,Text} from "./Themed";
 import { StyleSheet } from "react-native";
 
 import CountDown from "react-native-countdown-component"
-export default function Timer() {
+type TimerProps = {
+  numberOfQuiz : number;
+  time : number;
+};
+export default function Timer({numberOfQuiz,time}:TimerProps) {
   return (
     <View
     style ={
       styles.container
     }
     >
-        <Text style={[styles.text]}>Quiz : 60</Text>
+        <Text style={[styles.text]}>Quiz : {numberOfQuiz}</Text>
         <CountDown
         size={10}
-        until={100}
+        until={time}
         onFinish={()=>alert('Finished')}
         digitStyle={{borderColor:"none"}}
         digitTxtStyle={{color:'#1CC625',fontSize:20}}

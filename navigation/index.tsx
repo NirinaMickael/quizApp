@@ -26,6 +26,7 @@ function RootNavigator() {
         animation: 'none',
         headerShown: false,
       }}
+      id=''
     >
       <StackScreen.Screen name="Root" component={SignUpScreen} />
       <StackScreen.Screen
